@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Email ISV API",
+    "description": "Documentation for Email ISV API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [
+    {
+      "name": "email-isv",
+      "description": "Documentation for Email ISV API"
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.msgsndr.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    }
+  },
+  "paths": {}
+}

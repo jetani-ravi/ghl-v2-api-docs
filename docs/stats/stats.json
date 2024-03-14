@@ -1,0 +1,407 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Stats API",
+    "description": "Documentation for stats API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [
+    {
+      "name": "Stats",
+      "description": "Documentation for stats API"
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://services.leadconnectorhq.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "name": "Authorization",
+        "in": "header",
+        "description": "Use the Access Token generated with user type as Location",
+        "type": "http"
+      },
+      "Location-Access": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "name": "Authorization",
+        "in": "header",
+        "description": "Use the Access Token generated with user type as Location",
+        "type": "http"
+      },
+      "Agency-Access": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "name": "Authorization",
+        "in": "header",
+        "description": "Use the Access Token generated with user type as Company",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreatePageEventParams": {
+        "type": "object",
+        "properties": {
+          "funnelId": {
+            "type": "string"
+          },
+          "stepId": {
+            "type": "string"
+          },
+          "eventType": {
+            "type": "string"
+          },
+          "pageId": {
+            "type": "string"
+          },
+          "pageUrl": {
+            "type": "string"
+          },
+          "domainName": {
+            "type": "string"
+          },
+          "fingerprint": {
+            "type": "string"
+          },
+          "product": {
+            "$ref": "#/components/schemas/Product"
+          }
+        },
+        "required": [
+          "funnelId",
+          "stepId",
+          "eventType",
+          "pageId",
+          "pageUrl",
+          "domainName",
+          "fingerprint",
+          "product"
+        ]
+      },
+      "CreateVideoEventParams": {
+        "type": "object",
+        "properties": {
+          "funnelId": {
+            "type": "string"
+          },
+          "pageId": {
+            "type": "string"
+          },
+          "stepId": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "fingerprint": {
+            "type": "string"
+          },
+          "videoId": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "string"
+          },
+          "videoUrl": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number"
+          },
+          "contactId": {
+            "type": "string"
+          },
+          "userAgent": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "device": {
+            "type": "string"
+          },
+          "autoplay": {
+            "type": "boolean"
+          },
+          "eventType": {
+            "type": "string"
+          },
+          "version": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "funnelId",
+          "pageId",
+          "stepId",
+          "event",
+          "path",
+          "domain",
+          "fingerprint",
+          "videoId",
+          "locationId",
+          "videoUrl",
+          "progress",
+          "contactId",
+          "userAgent",
+          "email",
+          "phone",
+          "device",
+          "autoplay",
+          "eventType",
+          "version"
+        ]
+      },
+      "ResetFunnelStatsParams": {
+        "type": "object",
+        "properties": {
+          "funnelId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "funnelId"
+        ]
+      }
+    }
+  },
+  "paths": {
+    "/stats/event": {
+      "post": {
+        "operationId": "createFunnelPageEvent",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Access Token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer 9c48df2694a849b6089f9d0d3513efe"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePageEventParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/stats/video/event": {
+      "post": {
+        "operationId": "createFunnelVideoEvent",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Access Token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer 9c48df2694a849b6089f9d0d3513efe"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVideoEventParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/stats/video/event/beacon": {
+      "post": {
+        "operationId": "captureUnload",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Access Token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer 9c48df2694a849b6089f9d0d3513efe"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/stats/event-bg": {
+      "post": {
+        "operationId": "createFunnelPageEventBackground",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Access Token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer 9c48df2694a849b6089f9d0d3513efe"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/stats/reset": {
+      "post": {
+        "operationId": "resetStats",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Access Token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer 9c48df2694a849b6089f9d0d3513efe"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetFunnelStatsParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/stats/": {
+      "get": {
+        "operationId": "getFunnelStats",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Access Token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer 9c48df2694a849b6089f9d0d3513efe"
+            }
+          },
+          {
+            "name": "funnelId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fromDate",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "toDate",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "stepId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "controlPageUrl",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "variationPageUrl",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}

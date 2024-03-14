@@ -1,0 +1,291 @@
+{
+    "items": [
+        {
+            "type": "divider",
+            "title": "OAUTH 2.0"
+        },
+        {
+            "type": "item",
+            "title": "Overview",
+            "uri": "docs/oauth/Overview.md"
+        },
+        {
+            "type": "item",
+            "title": "Scopes",
+            "uri": "docs/oauth/Scopes.md"
+        },
+        {
+            "type": "item",
+            "title": "Authorization",
+            "uri": "docs/oauth/Authorization.md"
+        },
+        {
+            "type": "item",
+            "title": "External Billing",
+            "uri": "docs/oauth/Billing.md"
+        },
+        {
+            "type":"item",
+            "title":"External Authentication",
+            "uri":"docs/oauth/ExternalAuthentication.md"
+        },
+        {
+            "type": "item",
+            "title": "FAQs",
+            "uri": "docs/oauth/Faqs.md"
+        },
+        {
+            "type": "item",
+            "title": "OAuth 2.0",
+            "uri": "oauth/oauth.json"
+        },
+        {
+            "type": "divider",
+            "title": "APIs"
+        },
+        {
+            "type": "item",
+            "title": "Country List",
+            "uri": "docs/country list/Country.md"
+        },
+        {
+            "type": "item",
+            "title": "Businesses",
+            "uri": "businesses/businesses.json"
+        },
+        {
+            "type": "item",
+            "title": "Calendars",
+            "uri": "calendars/calendars.json"
+        },
+        {
+            "type": "item",
+            "title": "Campaigns",
+            "uri": "campaigns/campaigns.json"
+        },
+        {
+            "type": "item",
+            "title": "Companies",
+            "uri": "companies/companies.json"
+        },
+        {
+            "type": "item",
+            "title": "Contacts",
+            "uri": "contacts/contacts.json"
+        },
+        {
+            "type": "item",
+            "title": "Conversations",
+            "uri": "conversations/conversations.json"
+        },
+        {
+            "type": "item",
+            "title": "Forms",
+            "uri": "forms/forms.json"
+        },
+        {
+            "type": "item",
+            "title": "Invoices",
+            "uri": "invoices/invoices.json"
+        },
+        {
+            "type": "item",
+            "title": "Trigger Links",
+            "uri": "links/links.json"
+        },
+        {
+            "type": "item",
+            "title": "Locations",
+            "uri": "locations/locations.json"
+        },
+        {
+            "type": "item",
+            "title": "Media Library",
+            "uri": "medias/medias.json"
+        },
+        {
+            "type": "item",
+            "title": "Funnels",
+            "uri": "funnels/funnels.json"
+        },
+        {
+            "type": "item",
+            "title": "Opportunities",
+            "uri": "opportunities/opportunities.json"
+        },
+        {
+            "type": "item",
+            "title": "Payments",
+            "uri": "payments/payments.json"
+        },
+        {
+            "type": "item",
+            "title": "Products",
+            "uri": "products/products.json"
+        },
+        {
+            "type": "item",
+            "title": "Saas",
+            "uri": "saas-api/saas-api.json"
+        },
+        {
+            "type": "item",
+            "title": "Snapshots",
+            "uri": "snapshots/snapshots.json"
+        },
+        {
+            "type": "item",
+            "title": "Surveys",
+            "uri": "surveys/surveys.json"
+        },
+        {
+            "type": "item",
+            "title": "Users",
+            "uri": "users/users.json"
+        },
+        {
+            "type": "item",
+            "title": "Workflows",
+            "uri": "workflows/workflows.json"
+        },
+        {
+            "type": "divider",
+            "title": "webhook events"
+        },
+        {
+            "type": "item",
+            "title": "InboundMessage",
+            "uri": "docs/webhook events/InboundMessage.md"
+        },
+        {
+            "type": "item",
+            "title": "OutboundMessage",
+            "uri": "docs/webhook events/OutboundMessage.md"
+        },
+        {
+            "type": "item",
+            "title": "CampaignStatusUpdate",
+            "uri": "docs/webhook events/CampaignStatusUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "ContactCreate",
+            "uri": "docs/webhook events/ContactCreate.md"
+        },
+        {
+            "type": "item",
+            "title": "ContactDelete",
+            "uri": "docs/webhook events/ContactDelete.md"
+        },
+        {
+            "type": "item",
+            "title": "ContactDndUpdate",
+            "uri": "docs/webhook events/ContactDndUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "ContactTagUpdate",
+            "uri": "docs/webhook events/ContactTagUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "ContactUpdate",
+            "uri": "docs/webhook events/ContactUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "Conversation Provider Outbound Webhook",
+            "uri": "docs/webhook events/ProviderOutboundMessage.md"
+        },
+        {
+            "type": "item",
+            "title": "Conversation Unread Webhook",
+            "uri": "docs/webhook events/ConversationUnreadWebhook.md"
+        },
+        {
+            "type": "item",
+            "title": "LocationCreate",
+            "uri": "docs/webhook events/LocationCreate.md"
+        },
+        {
+            "type": "item",
+            "title": "LocationUpdate",
+            "uri": "docs/webhook events/LocationUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "NoteCreate",
+            "uri": "docs/webhook events/NoteCreate.md"
+        },
+        {
+            "type": "item",
+            "title": "NoteDelete",
+            "uri": "docs/webhook events/NoteDelete.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityCreate",
+            "uri": "docs/webhook events/OpportunityCreate.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityDelete",
+            "uri": "docs/webhook events/OpportunityDelete.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityUpdate",
+            "uri": "docs/webhook events/OpportunityUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityStageUpdate",
+            "uri": "docs/webhook events/OpportunityStageUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityStatusUpdate",
+            "uri": "docs/webhook events/OpportunityStatusUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityAssignedToUpdate",
+            "uri": "docs/webhook events/OpportunityAssignedToUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "OpportunityMonetaryValueUpdate",
+            "uri": "docs/webhook events/OpportunityMonetaryValueUpdate.md"
+        },
+        {
+            "type": "item",
+            "title": "TaskCreate",
+            "uri": "docs/webhook events/TaskCreate.md"
+        },
+        {
+            "type": "item",
+            "title": "TaskDelete",
+            "uri": "docs/webhook events/TaskDelete.md"
+        },
+        {
+            "type": "item",
+            "title": "TaskComplete",
+            "uri": "docs/webhook events/TaskComplete.md"
+        },
+        {
+            "type": "item",
+            "title": "AppUninstall",
+            "uri": "docs/webhook events/AppUninstall.md"
+        },
+        {
+            "type": "item",
+            "title": "AppInstall",
+            "uri": "docs/webhook events/AppInstall.md"
+        },
+        {
+            "type": "item",
+            "title": "UserCreate",
+            "uri": "docs/webhook events/UserCreate.md"
+        }
+    ]
+}

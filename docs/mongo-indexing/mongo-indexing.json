@@ -1,0 +1,131 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "MongoDB indexing API",
+    "description": "Documentation for MongoDB indexing API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [
+    {
+      "name": "MongoDB Indexing",
+      "description": "Documentation for MongoDB indexing API"
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.msgsndr.com"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "EmailTemplateSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "example": "subject text"
+          },
+          "attachments": {
+            "example": [],
+            "type": "array",
+            "items": {
+              "type": "array"
+            }
+          },
+          "html": {
+            "type": "string",
+            "example": "<html><head><style>body{font-family: sans-serif;}</style></head><body>testing</body></html>"
+          }
+        }
+      },
+      "GetEmailTemplateResponseSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2yMwhgTNO19bpintqrap"
+          },
+          "name": {
+            "type": "string",
+            "example": "email template"
+          },
+          "type": {
+            "type": "string",
+            "example": "email"
+          },
+          "dateAdded": {
+            "type": "string",
+            "example": "2022-01-27T12:31:19.679Z"
+          },
+          "template": {
+            "$ref": "#/components/schemas/EmailTemplateSchema"
+          },
+          "locationId": {
+            "type": "string",
+            "example": "ve9EPM428h8vShlRW1KT"
+          }
+        }
+      },
+      "SmsTemplateSchema": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "example": "sms body"
+          },
+          "attachments": {
+            "example": [],
+            "type": "array",
+            "items": {
+              "type": "array"
+            }
+          }
+        }
+      },
+      "GetSmsTemplateResponseSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2yMwhgTNO19bpintqrap"
+          },
+          "name": {
+            "type": "string",
+            "example": "sms template"
+          },
+          "type": {
+            "type": "string",
+            "example": "sms"
+          },
+          "template": {
+            "$ref": "#/components/schemas/SmsTemplateSchema"
+          },
+          "dateAdded": {
+            "type": "string",
+            "example": "2022-01-27T12:31:19.679Z"
+          },
+          "locationId": {
+            "type": "string",
+            "example": "ve9EPM428h8vShlRW1KT"
+          },
+          "urlAttachments": {
+            "example": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}
